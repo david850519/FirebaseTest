@@ -24,7 +24,14 @@ function login(){
   			photoUrl = user.photoURL;
   			uid = user.uid;
 
-  	var database=firebase.database();
+  	  	var database=firebase.database();
+  	  	ref.child("Users").orderByChild("username").equalTo(name).once("value", function(snapshot) {
+		    var userData = snapshot.val();
+		    if (userData){
+		      console.log("exists!");
+		    }
+		});
+
   			database.ref('Users/'+uid+'/').set({
   					username: name,
   					email: email,
