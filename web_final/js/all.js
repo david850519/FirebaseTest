@@ -47,8 +47,7 @@ function GetData(){
   			console.log(uid);
 
   			var database=firebase.database();
-  			database.ref('Users/').set({
-  				Uid:uid,
+  			database.ref('Users/'+uid+'/').set({
   				Userinfo:{
   					username: name,
   					email: email,
