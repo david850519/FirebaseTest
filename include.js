@@ -19,6 +19,7 @@ function login(){
         // The signed-in user info.
         var user = result.user;
         // ...
+        alert(getDisplayName());
       }).catch(function(error) {
         // Handle Errors here
         var errorCode = error.code;
