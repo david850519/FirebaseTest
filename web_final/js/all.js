@@ -18,6 +18,7 @@ function login(){
 	// The signed-in user info.
 	var user = result.user;
 	// ...
+
 	}).catch(function(error) {
 	// Handle Errors here
 	var errorCode = error.code;
@@ -29,7 +30,7 @@ function login(){
 	// ...
 	});
 	}
-
+//
 function GetData(){
 	firebase.auth().onAuthStateChanged(function(user) {
 		  if (user) {
@@ -44,6 +45,13 @@ function GetData(){
   			console.log(email);
   			console.log(photoUrl);
   			console.log(uid);
+
+  			var database=firebase.database();
+  			database.ref('Users/' +uid).set({
+  				username: name;
+  				email: email;
+  				profile_pic:photoUrl;
+  			});
 		  } else {
 		    // No user is signed in.
 		    alert("No");
