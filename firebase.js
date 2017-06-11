@@ -1,3 +1,4 @@
+ document.write('<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>');
  var config = {
         apiKey: "AIzaSyB-vFIegNSwJN7VIb8s_gzndptHs8N-eSs",
         authDomain: "webfblogin-6ae83.firebaseapp.com",
