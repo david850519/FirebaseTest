@@ -23,16 +23,9 @@ function login(){
   			email = user.email;
   			photoUrl = user.photoURL;
   			uid = user.uid;
-
+  			alert(name+"安安");
   	  	var database=firebase.database();
-  	  	database.ref.child("Users").orderByChild("username").equalTo(name).once("value", function(snapshot) {
-		    var userData = snapshot.val();
-		    if (userData){
-		      console.log("exists!");
-		    }
-		});
-
-  			database.ref('Users/'+uid+'/').set({
+  		database.ref('Users/'+uid+'/').set({
   					username: name,
   					email: email,
   					profile_pic:photoUrl		
