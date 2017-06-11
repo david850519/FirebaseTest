@@ -31,9 +31,9 @@ function login(){
 	});
 	}
 //
-function checkUser(uid){
+function checkUser(){
 	var ref=firebase.database();
-	var users=ref.child(Users);
+	var users=ref.child('Users');
 
 	users.once('value',function(snapshot){
 		if(!snapshot.hadChild(uid)){
@@ -58,7 +58,7 @@ function GetData(){
   			console.log(email);
   			console.log(photoUrl);
   			console.log(uid);
-  			checkUser(uid);
+  			checkUser();
   			/*var database=firebase.database();
   			database.ref('Users/'+uid+'/').set({
   				Userinfo:{
