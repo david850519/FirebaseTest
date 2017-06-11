@@ -48,9 +48,9 @@ function GetData(){
 
   			var database=firebase.database();
   			database.ref('Users/' +uid).set({
-  				username: name;
-  				email: email;
-  				profile_pic:photoUrl;
+  				username: name,
+  				email: email,
+  				profile_pic:photoUrl
   			});
 		  } else {
 		    // No user is signed in.
