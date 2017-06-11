@@ -47,11 +47,13 @@ function GetData(){
   			console.log(uid);
 
   			var database=firebase.database();
-  			database.ref('Users/').child('Uid').set(uid)
-  				.set({
-  				username: name,
-  				email: email,
-  				profile_pic:photoUrl
+  			database.ref('Users/').set({
+  				Uid:uid,
+  				Userinfo:{
+  					username: name,
+  					email: email,
+  					profile_pic:photoUrl
+  				}
   			});
 		  } else {
 		    // No user is signed in.
