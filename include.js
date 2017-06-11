@@ -32,10 +32,13 @@ function login(){
       }
 
 function GetUserData(){
-        var user=firebase.auth().currentUser;
-        if(user){
-        alert(user);
-        }else{
-        alert("error");
-        }
+        firebase.auth().onAuthStateChanged(function(user) {
+  if (user) {
+    // User is signed in.
+    alert("Yes");
+  } else {
+    // No user is signed in.
+    alert("No");
+  }
+});
 }
