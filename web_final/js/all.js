@@ -25,7 +25,7 @@ function login(){
   			uid = user.uid;
 
   	  	var database=firebase.database();
-  	  	ref.child("Users").orderByChild("username").equalTo(name).once("value", function(snapshot) {
+  	  	database.ref.child("Users").orderByChild("username").equalTo(name).once("value", function(snapshot) {
 		    var userData = snapshot.val();
 		    if (userData){
 		      console.log("exists!");
