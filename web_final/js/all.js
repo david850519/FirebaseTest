@@ -59,7 +59,8 @@ function GetData(){
   			console.log(photoUrl);
   			console.log(uid);
   			//checkUser
-  			var users=firebase.database.ref('Users/');
+  			var database=firebase.database();
+  			var users=database.ref('Users/');
   			
   			users.once('value',function(snapshot){
 				if(!snapshot.hadChild(uid)){
