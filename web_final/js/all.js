@@ -18,6 +18,18 @@ function login(){
 	// The signed-in user info.
 	var user = result.user;
 	// ...
+	var name,email,photoUrl,uid;
+		    name = user.displayName;
+  			email = user.email;
+  			photoUrl = user.photoURL;
+  			uid = user.uid;
+
+  	var database=firebase.database();
+  			database.ref('Users/'+uid+'/').set({
+  					username: name,
+  					email: email,
+  					profile_pic:photoUrl		
+  			});
 
 	}).catch(function(error) {
 	// Handle Errors here
@@ -31,7 +43,7 @@ function login(){
 	});
 	}
 //
-function GetData(){
+/*function GetData(){
 	firebase.auth().onAuthStateChanged(function(user) {
 		  if (user) {
 		    // User is signed in.
@@ -41,12 +53,8 @@ function GetData(){
   			email = user.email;
   			photoUrl = user.photoURL;
   			uid = user.uid;
-  			console.log(name);
-  			console.log(email);
-  			console.log(photoUrl);
-  			console.log(uid);
   			//checkUser
-  			/*var database=firebase.database();
+  			var database=firebase.database();
   			var users=database.ref('Users/');
   			
   			users.once('value',function(snapshot){
@@ -55,21 +63,19 @@ function GetData(){
 				}else{
 					alert("exist");
 				}
-	});*/
+	});
   			var database=firebase.database();
-  			database.ref('Users/').set({
-  				Uid:uid:{
+  			database.ref('Users/'+uid+'/').set({
   					username: name,
   					email: email,
-  					profile_pic:photoUrl
-  				}
+  					profile_pic:photoUrl		
   			});
 		  } else {
 		    // No user is signed in.
 		    alert("No");
 		  }
 		});
-}
+}*/
 
 
 $(function(){
