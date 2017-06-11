@@ -1,4 +1,4 @@
- document.write('<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>');
+
  var config = {
         apiKey: "AIzaSyB-vFIegNSwJN7VIb8s_gzndptHs8N-eSs",
         authDomain: "webfblogin-6ae83.firebaseapp.com",
@@ -7,7 +7,6 @@
         storageBucket: "webfblogin-6ae83.appspot.com",
         messagingSenderId: "312418366446"
       };
-      firebase.initializeApp(config);
 
 function login(){
         var provider = new firebase.auth.FacebookAuthProvider();
