@@ -35,6 +35,10 @@ function GetData(){
 		  if (user) {
 		    // User is signed in.
 		    alert("Yes");
+		    console.log("DisplayName:"getDisplayName());
+		    console.log("getEmail:"getEmail());
+		    console.log("PhotoUrl:"getPhotoUrl());
+		    console.log("Uid:"getUid);
 		  } else {
 		    // No user is signed in.
 		    alert("No");
