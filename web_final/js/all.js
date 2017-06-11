@@ -31,6 +31,19 @@ function login(){
 	});
 	}
 //
+function checkUser(uid){
+	var ref=firebase.database();
+	var users=ref.child(Users);
+
+	users.once('value',function(snapshot){
+		if(!snapshot.hadChild(uid)){
+			alert("nope");
+		}else{
+			alert("exist");
+		}
+	});
+}
+
 function GetData(){
 	firebase.auth().onAuthStateChanged(function(user) {
 		  if (user) {
@@ -45,21 +58,23 @@ function GetData(){
   			console.log(email);
   			console.log(photoUrl);
   			console.log(uid);
-
-  			var database=firebase.database();
+  			checkUser(uid);
+  			/*var database=firebase.database();
   			database.ref('Users/'+uid+'/').set({
   				Userinfo:{
   					username: name,
   					email: email,
   					profile_pic:photoUrl
   				}
-  			});
+  			});*/
 		  } else {
 		    // No user is signed in.
 		    alert("No");
 		  }
 		});
 	}	
+
+
 
 $(function(){
 
