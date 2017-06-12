@@ -23,14 +23,13 @@ function login(){
   			email = user.email;
   			photoUrl = user.photoURL;
   			uid = user.uid;
-  			console.log('name:'name+',email:'+email+',photoUrl:'+photoUrl+',uid:'+uid);
+  			console.log(uid);
   	  	/*var database=firebase.database();
   		database.ref('Users/'+uid+'/').set({
   					username: name,
   					email: email,
   					profile_pic:photoUrl		
   			});*/
-
 	}).catch(function(error) {
 	// Handle Errors here
 	var errorCode = error.code;
