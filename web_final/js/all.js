@@ -47,7 +47,6 @@ function checkIfUserExist(){
 	var usersRef=database.ref('Users/');
 	usersRef.once('value', function(snapshot) {
     	var exists = (snapshot.val() !== null);
-    	userExistsCallback(uid, exists);
    	 	if (exists) {
     		alert('user ' + userId + ' exists!');
   		} else {
