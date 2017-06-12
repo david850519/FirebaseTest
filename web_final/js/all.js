@@ -51,7 +51,7 @@ function checkIfUserExist(){
 		var database=firebase.database();
 		var usersRef=database.ref('Users/');
 		usersRef.once('value', function(snapshot) {
-    		if(snapshot.haschild(uid)){
+    		if(snapshot.hasChild(uid)){
     			alert(uid+'exist');
     		}else{
     			alert(uid+"not exist");
