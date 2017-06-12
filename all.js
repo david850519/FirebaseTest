@@ -21,7 +21,7 @@ function login(){
   		photoUrl = user.photoURL;
   		uid = user.uid;
   		console.log(uid);
-  		document.getElementById('header').innerHTML=name;
+  		document.getElementById('headerLogin').innerHTML=name;
 	}).catch(function(error) {
 		var errorCode = error.code;
 		var errorMessage = error.message;
