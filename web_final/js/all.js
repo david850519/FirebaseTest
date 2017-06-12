@@ -23,13 +23,13 @@ function login(){
   			email = user.email;
   			photoUrl = user.photoURL;
   			uid = user.uid;
-  			alert(name+"安安");
-  	  	var database=firebase.database();
+  			console.log('name:'name+',email:'+email+',photoUrl:'+photoUrl+',uid:'+uid)
+  	  	/*var database=firebase.database();
   		database.ref('Users/'+uid+'/').set({
   					username: name,
   					email: email,
   					profile_pic:photoUrl		
-  			});
+  			});*/
 
 	}).catch(function(error) {
 	// Handle Errors here
@@ -42,6 +42,20 @@ function login(){
 	// ...
 	});
 	}
+
+function checkIfUserExist(){
+	var USERS_LOCATION="https://facebooklogin-f6d7c.firebaseio.com/Users"
+	var usersRef=new firebase(USERS_LOCATION);
+	usersRef.once('value', function(snapshot) {
+    	var exists = (snapshot.val() !== null);
+    	userExistsCallback(uid, exists);
+   	 	if (exists) {
+    		alert('user ' + userId + ' exists!');
+  		} else {
+   			alert('user ' + userId + ' does not exist!');
+  		}
+  });
+}
 //
 /*function GetData(){
 	firebase.auth().onAuthStateChanged(function(user) {
