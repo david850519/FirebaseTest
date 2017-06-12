@@ -48,9 +48,9 @@ function checkIfUserExist(){
 	usersRef.once('value', function(snapshot) {
     	var exists = (snapshot.val() !== null);
    	 	if (exists) {
-    		alert('user ' + userId + ' exists!');
+    		alert('user ' + uid + ' exists!');
   		} else {
-   			alert('user ' + userId + ' does not exist!');
+   			alert('user ' + uid + ' does not exist!');
   		}
   });
 }
