@@ -17,9 +17,7 @@
 	$( document ).ready(function() {
     	console.log( "ready!" );
     	checkCookie();
-    	if(checkCookie()==1){
-    		document.getElementById('headerLogin').innerHTML='<a href="#">'+name+'</a>';
-    	}
+    	
     /*firebase.auth().onAuthStateChanged(function(user) {
 		  if (user) {
 		        alert("no login");
