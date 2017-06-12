@@ -21,7 +21,7 @@ function login(){
   		photoUrl = user.photoURL;
   		uid = user.uid;
   		console.log(uid);
-  		document.getElementById('headerLogin').innerHTML='<a href="#">'+name+'</a>';
+  		setCookie(name);
 
 	}).catch(function(error) {
 		var errorCode = error.code;
@@ -30,3 +30,19 @@ function login(){
 		var credential = error.credential;
 	});
 	}
+
+function setCookie(name){
+	var d = new Date();
+	d.setTime=(d.getTime()+1000);
+	var expires="expires"+d.toUTCString();
+	document.cookie="username="+name+";"+expires+";path=/";
+}
+
+function checkCookie(){
+	var username=getCookie("username");
+	if(username!=""){
+		alert("Welcome"+username);
+	}else{
+		alert("Plz Login");
+	}
+}
