@@ -51,12 +51,12 @@ function checkIfUserExist(){
 		var database=firebase.database();
 		var usersRef=database.ref('Users/');
 		usersRef.once('value', function(snapshot) {
-    		var exists = (snapshot.val() !== null);
-   	 		if (exists) {
-    			alert('user ' + uid + ' exists!');
-  			} else {
-   				alert('user ' + uid + ' does not exist!');
-  			}
+    		if(snapshot.haschild(uid)){
+    			alert(uid+'exist');
+    		}else{
+    			alert(uid+"not exist");
+    		}
+   	 		
   		});
 
   }
