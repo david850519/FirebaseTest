@@ -44,7 +44,7 @@ function login(){
 
 function checkIfUserExist(){
 	var USERS_LOCATION="https://facebooklogin-f6d7c.firebaseio.com/Users"
-	var usersRef=new firebase(USERS_LOCATION);
+	var usersRef=new Firebase(USERS_LOCATION);
 	usersRef.once('value', function(snapshot) {
     	var exists = (snapshot.val() !== null);
     	userExistsCallback(uid, exists);
