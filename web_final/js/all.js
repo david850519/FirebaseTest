@@ -43,15 +43,24 @@ function login(){
 	}
 
 function checkIfUserExist(){
-	var database=firebase.database();
-	var usersRef=database.ref('Users/');
-	usersRef.once('value', function(snapshot) {
+	firebase.auth().onAuthStateChanged(function(user) {
+	if(user){
+		alert("login");
+		var uid;
+		uid=user.uid;
+		var database=firebase.database();
+		var usersRef=database.ref('Users/');
+		usersRef.once('value', function(snapshot) {
     	var exists = (snapshot.val() !== null);
    	 	if (exists) {
     		alert('user ' + uid + ' exists!');
   		} else {
    			alert('user ' + uid + ' does not exist!');
   		}
+  		}else{
+  			alert("no login");
+  		}
+  });
   });
 }
 //
