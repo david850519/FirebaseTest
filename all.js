@@ -21,7 +21,7 @@ function login(){
   		photoUrl = user.photoURL;
   		uid = user.uid;
   		console.log(uid);
-  		document.getElementById('headerLogin').innerHTML="<a href="#">"+name+"</a>";
+  		document.getElementById('headerLogin').innerHTML='<a href="#">'+name+'</a>';
 
 	}).catch(function(error) {
 		var errorCode = error.code;
