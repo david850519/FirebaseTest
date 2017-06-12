@@ -33,7 +33,7 @@ function login(){
 
 function setCookie(name){
 	var d = new Date();
-	d.setTime=(d.getTime()+1000);
+	d.setTime=(d.getTime()+60);
 	var expires="expires"+d.toUTCString();
 	document.cookie="username="+name+";"+expires+";path=/";
 }
@@ -54,11 +54,16 @@ if (document.cookie.length>0)
 return ""
 }
 
+
 function checkCookie(){
 	var username=getCookie("username");
 	if(username!=""){
-		alert("Welcome"+username);
+		var cookie=0;
+		return cookie;
+		console.log(cookie);
 	}else{
-		alert("Plz Login");
+		var cookie=1;
+		return cookie;
+		console.log(cookie);
 	}
 }
