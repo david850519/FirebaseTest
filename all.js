@@ -58,12 +58,10 @@ return ""
 function checkCookie(){
 	var username=getCookie("username");
 	if(username!=""){
-		var cookie=0;
-		return cookie;
-		console.log(cookie);
+		return 0;
+		console.log(0);
 	}else{
-		var cookie=1;
-		return cookie;
-		console.log(cookie);
+		return 1;
+		console.log(1);
 	}
 }
