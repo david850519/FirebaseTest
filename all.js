@@ -54,16 +54,11 @@ if (document.cookie.length>0)
 return ""
 }
 
-
 function checkCookie(){
 	var username=getCookie("username");
 	if(username!=""){
-		var cookie=0;
-		return cookie;
-		console.log(cookie);
+		alert("Welcome"+username);
 	}else{
-		var cookie=1;
-		return cookie;
-		console.log(cookie);
+		alert("Plz Login");
 	}
 }
