@@ -30,7 +30,7 @@ function login(){
 		var credential = error.credential;
 	});
 	}
-
+/*
 function setCookie(name){
 	var d = new Date();
 	d.setTime=(d.getTime()+1000);
@@ -63,9 +63,10 @@ function checkCookie(){
 		console.log("no user");
 		return 1;
 	}
-}
+}*/
 
 function changeheader(name,img){
 	console.log("name:"+name);
 	console.log("img:"+img);
+	document.getElementById('headerLogin').innerHTML='<a href="#">'+name+'</a>';
 }
