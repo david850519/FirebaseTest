@@ -18,10 +18,13 @@
     	console.log( "ready!" );
     	firebase.auth().onAuthStateChanged(function(user) {
 		  if (user) {
-		        alert("is login");
+		  		var name = user.displayName;
+		  		var photoUrl = user.photoURL;
+		        console.log("is login");
 		        console.log(user);
+		        changeheader(name,photoUrl);
 		    }else{
-		    	alert("no login");
+		    	console.log("no login");
 		    	console.log(user);
 		    }
     	/*if(checkCookie()=="1"){
