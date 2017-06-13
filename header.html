@@ -24,6 +24,7 @@
 		        console.log(user);
 		        changeheader(name,photoUrl);
 		    }else{
+		    	$( "#headerLogout" ).hide();
 		    	console.log("no login");
 		    	console.log(user);
 		    }
@@ -51,6 +52,7 @@
 			<ul>
 				<li id="headerCart"><a href="#" >購物車</a></li>
 				<li id="headerLogin"><a href="#"onClick="login()">登入</a></li>
+				<li id="headerLogout"><a href="#"onClick="logout()">登出</a></li>
 			</ul>
 		</div>
 	</div>

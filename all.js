@@ -30,6 +30,16 @@ function login(){
 		var credential = error.credential;
 	});
 	}
+
+function logout(){
+	firebase.auth().signOut().then(function() {
+ 	console.log("logout ok");
+ 	 // Sign-out successful.
+		}).catch(function(error) {
+  	// An error happened.
+  	console.log("logout error");
+	});
+	}
 /*
 function setCookie(name){
 	var d = new Date();
