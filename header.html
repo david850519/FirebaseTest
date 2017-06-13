@@ -13,20 +13,41 @@
 	<script>
 	  firebase.initializeApp(config);
 	</script>
-
+<script type="text/javascript">
+	$( document ).ready(function() {
+    	console.log( "ready!" );
+    	firebase.auth().onAuthStateChanged(function(user) {
+		  if (user) {
+		        alert("is login");
+		        console.log(user);
+		    }else{
+		    	alert("no login");
+		    	console.log(user);
+		    }
+    	/*if(checkCookie()=="1"){
+    		changeheader(name,photoUrl);
+    	}*/
+    /*firebase.auth().onAuthStateChanged(function(user) {
+		  if (user) {
+		        alert("no login");
+		    }else{
+		    	alert("is login");
+		    	document.getElementById('headerLogin').innerHTML='<a href="#">'+name+'</a>';
+		    }
+	});*/
+	});
+});
+</script>
 </head>
 <body>
 	<div class="header">
 		<div class="headerlogo1">
 			<img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t31.0-8/12888674_641166666022602_8845148715942982024_o.png?oh=378a420158b9af671e12c9ea3c169677&oe=59A64CEB">
 		</div>
-		<div class="headerlogo2">
-			<img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t31.0-8/12022422_641342749338327_4474956812488089749_o.jpg?oh=38de6ef59477194685f3d5b22fbd5a18&oe=599D337E">
-		</div>
 		<div class="headerlist">
 			<ul>
-				<li id="headerCart"><a href="#" onClick="login()">購物車</a></li>
-				<li id="headerLogin"><a href="#">登入</a></li>
+				<li id="headerCart"><a href="#" >購物車</a></li>
+				<li id="headerLogin"><a href="#"onClick="login()">登入</a></li>
 			</ul>
 		</div>
 	</div>
