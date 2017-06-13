@@ -17,9 +17,9 @@
 	$( document ).ready(function() {
     	console.log( "ready!" );
     	firebase.auth().onAuthStateChanged(function(user) {
-		  if (checkCookie()==1) {
+		  if (user) {
 		        alert("is login");
-		        console.log(name+photoUrl);
+		        console.log(user);
 		    }else{
 		    	alert("no login");
 		    	console.log(user);
