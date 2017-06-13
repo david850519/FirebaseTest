@@ -68,5 +68,5 @@ function checkCookie(){
 function changeheader(name,img){
 	console.log("name:"+name);
 	console.log("img:"+img);
-	document.getElementById('headerLogin').innerHTML='<img src="'+img+'"><a href="#">'+name+'</a>';
+	document.getElementById('headerLogin').innerHTML='<a href="#"><img src="'+img+'">'+name+'</a>';
 }
