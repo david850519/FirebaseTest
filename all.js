@@ -21,7 +21,7 @@ function login(){
   		photoUrl = user.photoURL;
   		uid = user.uid;
   		console.log(uid);
-  		setCookie(name);
+  		$( "#headerLogout" ).show();
 
 	}).catch(function(error) {
 		var errorCode = error.code;
