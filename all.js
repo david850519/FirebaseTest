@@ -34,7 +34,7 @@ function login(){
 function logout(){
 	firebase.auth().signOut().then(function() {
  	console.log("logout ok");
- 	document.getElementById('headerLogin').innerHTML='登入';
+ 	document.getElementById('headerLogin').innerHTML='<a href="#">登入</a>';
  	 // Sign-out successful.
 		}).catch(function(error) {
   	// An error happened.
