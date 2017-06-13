@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<link rel="stylesheet" href="header.css">
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script src='all.js'></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase-database.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase-messaging.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.1.1/firebase.js"></script>
+	<script>
+	  firebase.initializeApp(config);
+	</script>
+</head>
+<body>
+	<div class="header">
+		<div class="headerlogo1">
+			<img src="https://scontent-tpe1-1.xx.fbcdn.net/v/t31.0-8/12888674_641166666022602_8845148715942982024_o.png?oh=378a420158b9af671e12c9ea3c169677&oe=59A64CEB">
+		</div>
+		<div class="headerlist">
+			<ul>
+				<li id="headerCart"><a href="#" >購物車</a></li>
+				<li id="headerLogin"><a href="#"onClick="login()">登入</a></li>
+				<li id="headerLogout"><a href="#"onClick="logout()">登出</a></li>
+			</ul>
+		</div>
+	</div>
+</body>
+</html>
