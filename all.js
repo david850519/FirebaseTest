@@ -57,8 +57,15 @@ return ""
 function checkCookie(){
 	var username=getCookie("username");
 	if(username!=""){
-		alert("Welcome"+username);
+		console.log("user:"+username);
+		return 0;
 	}else{
-		alert("Plz Login");
+		console.log("no user");
+		return 1;
 	}
+}
+
+function changeheader(name,img){
+	console.log("name:"+name);
+	console.log("img:"+img);
 }

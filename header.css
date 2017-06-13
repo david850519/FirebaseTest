@@ -52,6 +52,7 @@ table {
 
 .headerlogo1{
 	float:left;
+	margin-right: 100px;
 }
 
 .headerlogo1 img{
@@ -59,21 +60,12 @@ table {
 	padding:10px;
 }
 
-.headerlogo2{
-	float:left;
-}
-
-.headerlogo2 img{
-	padding: 10px;
-	height: 130px;
-	width: 480px;
-}
 
 .headerlist{
-	float:right;
+	float:left;
 	margin-right: 50px;
 	position: absolute;
-	right: 0;
+	right:200px;
 	bottom: 0;
 
 }
@@ -87,7 +79,7 @@ table {
 	font-size: 18px;
 	display: block;
 	text-decoration: none;
-	width: 140px;
+	width: 200px;
 	color: #3C3C3C;
 	text-align: center;
 	padding:10px;
